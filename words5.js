@@ -1,0 +1,14 @@
+var words = [
+	'SKIPBO',
+	'DRUGS',
+	'ACADEMICI',
+	'PIDAG',
+	'ESTAFETTE',
+	'FRISDRANKEN',
+	'INTEGRAAL',
+	'MEELOPER',
+	'GROLSCH',
+	'ROMEIN',
+	'ALPEN',
+	'SINTELBAAN'
+];

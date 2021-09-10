@@ -1,0 +1,14 @@
+var words = [
+	'CHAOS',
+	'EDUCAFE',
+	'LINEAIR',
+	'SJAARS',
+	'TOILET',
+	'GEKKENRIJTJE',
+	'BIDON',
+	'SOMBER',
+	'KRUKJE',
+	'BEKER',
+	'BROKKELEN',
+	'BATAVIEREN'
+];

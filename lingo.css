@@ -1,0 +1,97 @@
+* { padding: 0; margin: 0; }
+html, body { width: 100%; height: 100%; font-family: 'Ubuntu', sans-serif; }
+.container { width: 100%; height: 100%; background-image: url(bg.jpg); background-size: cover; }
+.content { display: inline-block; margin: 0px auto; text-align: center; font-weight: bold; font-size: 80px; margin-top: 30px; }
+.score { 
+	background-color: background: #7db9e8;
+	background: -moz-linear-gradient(top, #7db9e8 0%, #1e5799 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#7db9e8), color-stop(100%,#1e5799));
+	background: -webkit-linear-gradient(top, #7db9e8 0%,#1e5799 100%);
+	background: -o-linear-gradient(top, #7db9e8 0%,#1e5799 100%);
+	background: -ms-linear-gradient(top, #7db9e8 0%,#1e5799 100%);
+	background: linear-gradient(to bottom, #7db9e8 0%,#1e5799 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7db9e8', endColorstr='#1e5799',GradientType=0 ); 
+	width: 200px; height: 125px; display: inline-block; vertical-align: top; border: #909090 6px solid; 
+}
+.score.active { border: yellow 6px solid; }
+.score span { padding: 12px 0; display: block; }
+#score0Container { border-top-left-radius: 62px; border-bottom-left-radius: 62px; }
+#score1Container { border-top-right-radius: 62px; border-bottom-right-radius: 62px; }
+#board { 
+	background: #7db9e8;
+	background: -moz-linear-gradient(top, #7db9e8 0%, #1e5799 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#7db9e8), color-stop(100%,#1e5799));
+	background: -webkit-linear-gradient(top, #7db9e8 0%,#1e5799 100%);
+	background: -o-linear-gradient(top, #7db9e8 0%,#1e5799 100%);
+	background: -ms-linear-gradient(top, #7db9e8 0%,#1e5799 100%);
+	background: linear-gradient(to bottom, #7db9e8 0%,#1e5799 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7db9e8', endColorstr='#1e5799',GradientType=0 ); 
+	margin: 0px auto; border-collapse: collapse; -webkit-box-shadow: 7px 7px 24px 0px rgba(50, 50, 50, 0.65);
+	-moz-box-shadow:    7px 7px 24px 0px rgba(50, 50, 50, 0.65);
+	box-shadow:         7px 7px 24px 0px rgba(50, 50, 50, 0.65); 
+	display: inline-block; vertical-align: top; 
+}
+#board td {
+	line-height: 100px; height: 100px; width: 100px; display: inline-block; vertical-align: middle; border: 6px ridge #CCC; 
+}
+#board td.silver { 
+	background: rgb(254,255,255);
+	background: -moz-radial-gradient(center, ellipse cover, rgba(254,255,255,1) 0%, rgba(218,235,242,1) 100%);
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(254,255,255,1)), color-stop(100%,rgba(218,235,242,1)));
+	background: -webkit-radial-gradient(center, ellipse cover, rgba(254,255,255,1) 0%,rgba(218,235,242,1) 100%);
+	background: -o-radial-gradient(center, ellipse cover, rgba(254,255,255,1) 0%,rgba(218,235,242,1) 100%);
+	background: -ms-radial-gradient(center, ellipse cover, rgba(254,255,255,1) 0%,rgba(218,235,242,1) 100%);
+	background: radial-gradient(ellipse at center, rgba(254,255,255,1) 0%,rgba(218,235,242,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#feffff', endColorstr='#daebf2',GradientType=1 );
+}
+#board td.yellow { background-color: yellow; border-radius: 60px; }
+
+.balls {
+	width: 420px; height: 500px; margin-top: 30px; left: 50%; margin-left: -210px; position: absolute; z-index: 100; padding: 10px;
+	background: rgb(254,255,255);
+	background: -moz-radial-gradient(center, ellipse cover, rgba(254,255,255,1) 0%, rgba(218,235,242,1) 100%);
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(254,255,255,1)), color-stop(100%,rgba(218,235,242,1)));
+	background: -webkit-radial-gradient(center, ellipse cover, rgba(254,255,255,1) 0%,rgba(218,235,242,1) 100%);
+	background: -o-radial-gradient(center, ellipse cover, rgba(254,255,255,1) 0%,rgba(218,235,242,1) 100%);
+	background: -ms-radial-gradient(center, ellipse cover, rgba(254,255,255,1) 0%,rgba(218,235,242,1) 100%);
+	background: radial-gradient(ellipse at center, rgba(254,255,255,1) 0%,rgba(218,235,242,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#feffff', endColorstr='#daebf2',GradientType=1 );
+}
+.balls td {
+	line-height: 100px; height: 100px; width: 100px; display: inline-block; vertical-align: middle;
+	border-radius: 50px; font-size: 60px; color: white; text-shadow: 3px 3px rgba(120, 120, 120, .5);
+	background: rgb(125,185,232);
+	background: -moz-radial-gradient(center, ellipse cover, rgba(125,185,232,1) 0%, rgba(21,55,109,1) 100%);
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(125,185,232,1)), color-stop(100%,rgba(21,55,109,1)));
+	background: -webkit-radial-gradient(center, ellipse cover, rgba(125,185,232,1) 0%,rgba(21,55,109,1) 100%);
+	background: -o-radial-gradient(center, ellipse cover, rgba(125,185,232,1) 0%,rgba(21,55,109,1) 100%);
+	background: -ms-radial-gradient(center, ellipse cover, rgba(125,185,232,1) 0%,rgba(21,55,109,1) 100%);
+	background: radial-gradient(ellipse at center, rgba(125,185,232,1) 0%,rgba(21,55,109,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7db9e8', endColorstr='#15376d',GradientType=1 );
+}
+.balls td.red, .balls td.yellow {
+	background-size: 200px 200px;
+	background-position: 100px 100px;
+}
+.balls td.red { 
+	background: rgb(255,43,43);
+	background: -moz-radial-gradient(center, ellipse cover, rgba(255,43,43,1) 0%, rgba(168,28,28,1) 100%);
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(255,43,43,1)), color-stop(100%,rgba(168,28,28,1)));
+	background: -webkit-radial-gradient(center, ellipse cover, rgba(255,43,43,1) 0%,rgba(168,28,28,1) 100%);
+	background: -o-radial-gradient(center, ellipse cover, rgba(255,43,43,1) 0%,rgba(168,28,28,1) 100%);
+	background: -ms-radial-gradient(center, ellipse cover, rgba(255,43,43,1) 0%,rgba(168,28,28,1) 100%);
+	background: radial-gradient(ellipse at center, rgba(255,43,43,1) 0%,rgba(168,28,28,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff2b2b', endColorstr='#a81c1c',GradientType=1 ); 
+}
+.balls td.yellow {
+	background: rgb(240,255,35);
+	background: -moz-radial-gradient(center, ellipse cover, rgba(240,255,35,1) 0%, rgba(134,140,19,1) 100%);
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(240,255,35,1)), color-stop(100%,rgba(134,140,19,1)));
+	background: -webkit-radial-gradient(center, ellipse cover, rgba(240,255,35,1) 0%,rgba(134,140,19,1) 100%);
+	background: -o-radial-gradient(center, ellipse cover, rgba(240,255,35,1) 0%,rgba(134,140,19,1) 100%);
+	background: -ms-radial-gradient(center, ellipse cover, rgba(240,255,35,1) 0%,rgba(134,140,19,1) 100%);
+	background: radial-gradient(ellipse at center, rgba(240,255,35,1) 0%,rgba(134,140,19,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0ff23', endColorstr='#868c13',GradientType=1 );
+}
+.balls td.yellow .ballContent { display: none; }
+.balls .description { font-size: 45px; font-weight: bold; margin-top: 20px; display: block; }
